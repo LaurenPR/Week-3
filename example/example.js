@@ -14,13 +14,13 @@
 
   // Mock user input
   // Filter out according to these zip codes:
-  var acceptedZipcodes = [19106, 19107, 19124, 19111, 19118];
+  var acceptedZipcodes = [19106, 19107, 19124, 19111, 19118]; // pretend user data
   // Filter according to enrollment that is greater than this variable:
   var minEnrollment = 300;
 
 
   // clean data
-  for (var i = 0; i < schools.length - 1; i++) {
+  for (var i = 0; i < schools.length; i++) {
     // If we have '19104 - 1234', splitting and taking the first (0th) element
     // as an integer should yield a zip in the format above
     if (typeof schools[i].ZIPCODE === 'string') {
