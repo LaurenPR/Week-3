@@ -19,8 +19,13 @@
   var minEnrollment = 300;
 
 
+<<<<<<< HEAD
   // clean data
   for (var i = 0; i < schools.length; i++) {
+=======
+  // clean the data
+  for (var i = 0; i < schools.length - 1; i++) {
+>>>>>>> origin/master
     // If we have '19104 - 1234', splitting and taking the first (0th) element
     // as an integer should yield a zip in the format above
     if (typeof schools[i].ZIPCODE === 'string') {
@@ -30,7 +35,7 @@
     }
 
     // Check out the use of typeof here — this was not a contrived example.
-    // Someone actually messed up the data entry
+    // Someone actually messed up the data entry.
     if (typeof schools[i].GRADE_ORG === 'number') {
       schools[i].HAS_KINDERGARTEN = schools[i].GRADE_LEVEL < 1;
       schools[i].HAS_ELEMENTARY = 1 < schools[i].GRADE_LEVEL < 6;
@@ -48,6 +53,7 @@
   var filtered_data = [];
   var filtered_out = [];
   for (var i = 0; i < schools.length - 1; i++) {
+    // These really should be predicates!
     isOpen = schools[i].ACTIVE.toUpperCase() == 'OPEN';
     isPublic = (schools[i].TYPE.toUpperCase() !== 'CHARTER' ||
                 schools[i].TYPE.toUpperCase() !== 'PRIVATE');
@@ -87,7 +93,8 @@
     } else {
       color = '#FF0000'; //red
     }
-    // The style options
+
+    // The style options - note that we're using an object to define properties
     var pathOpts = {'radius': filtered_data[i].ENROLLMENT / 30,
                     'fillColor': color};
     L.circleMarker([filtered_data[i].Y, filtered_data[i].X], pathOpts)

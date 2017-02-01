@@ -60,6 +60,7 @@ console.log('isOdd success:', isOdd(4) === false);
 
 /* =====================
 Instructions: Write a function that takes a list of numbers and returns a list with only numbers above 10
+NOTE: We expect an error until this function is written properly!
 ===================== */
 
 var filterOutLessThan10 = function(list) {
@@ -72,10 +73,15 @@ var filterOutLessThan10 = function(list) {
   return (newArray2);
 };
 
+<<<<<<< HEAD
 
 var test = filterOutLessThan10([4, 11]).length === 1 && filterOutLessThan10([4, 11])[0] === 11;
 console.log('filterOutLessThan10 success:', test);
 
+=======
+var test = filterOutLessThan10([4, 11]).length === 1 && filterOutLessThan10([4, 11])[0] === 11;
+console.log('filterOutLessThan10 success:', test)
+>>>>>>> origin/master
 
 /* =====================
 Stretch goal — NOT required
@@ -97,8 +103,11 @@ var filter = function(array4, func) {
 
 var test2 = filter([4, 11], isOdd).length === 1 && filter([4, 11], isOdd)[0] === 11;
 console.log('filter success:', test2);
+<<<<<<< HEAD
 
 
 // console.log('filter success:', filter([4, 11, 8, 15], filter) === [11, 15]); //This is returning [11, 15] so I'm not surs why I am not getting a true
 
 // console.log('filter success _.each method:', _.each([4, 11, 8, 15], isOdd) === [11, 15]); //This is returning [11, 15] so I'm not surs why I am not getting a true
+=======
+>>>>>>> origin/master
